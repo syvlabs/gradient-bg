@@ -1,5 +1,6 @@
-noise = {intensity: 0.1, coverage: 0.7};
+noise = {intensity: 0.05, coverage: 0.7};
 BLUR = 150;
+highlightColor = "rgba(100,91,59";
 gradients = [
     createLinear ({ // Base gradient
         type: "base",
@@ -9,44 +10,44 @@ gradients = [
         ratio: [0, 0.5, 1]
     }),
     createCircle ({ // Pinhole effect
-        type: "base",
+        type: "pinhole",
         colors: ["rgba(0,0,0,0)", "rgba(0,0,0,1)"],
         center: {x: relX(0.5), y: relY(0.5)},
-        r: Math.min(relX(1.15), relY(1.15))
+        r: Math.max(relX(0.7), relY(0.7))
     }),
     createCircle ({
         type: "highlight",
-        colors: ["rgba(232,221,128,0.6)", "rgba(232,221,128,0)"],
+        colors: [highlightColor+",0.6)", highlightColor+",0)"],
         center: {x: relX(0.7), y: relY(0.55)},
         r: Math.min(relX(0.4), relY(0.4))
     }),
     createCircle ({
         type: "highlight",
-        colors: ["rgba(232,221,128,0.6)", "rgba(232,221,128,0)"],
+        colors: [highlightColor+",0.6)", highlightColor+",0)"],
         center: {x: relX(0.5), y: relY(0.4)},
         r: Math.min(relX(0.3), relY(0.3))
     }),
     createCircle ({
         type: "highlight",
-        colors: ["rgba(232,221,128,0.4)", "rgba(232,221,128,0)"],
+        colors: [highlightColor+",0.4)", highlightColor+",0)"],
         center: {x: relX(0.3), y: relY(0.55)},
         r: Math.min(relX(0.4), relY(0.4))
     }),
     createCircle ({
         type: "highlight",
-        colors: ["rgba(232,221,128,0.4)", "rgba(232,221,128,0)"],
+        colors: [highlightColor+",0.4)", highlightColor+",0)"],
         center: {x: relX(0.4), y: relY(0.6)},
         r: Math.min(relX(0.3), relY(0.3))
     }),
     createCircle ({
         type: "highlight",
-        colors: ["rgba(232,221,128,0.4)", "rgba(232,221,128,0)"],
+        colors: [highlightColor+",0.4)", highlightColor+",0)"],
         center: {x: relX(0.6), y: relY(0.6)},
         r: Math.min(relX(0.3), relY(0.3))
     }),
     createCircle ({
         type: "highlight",
-        colors: ["rgba(232,221,158,0.5)", "rgba(232,221,128,0)"],
+        colors: ["rgba(232,221,158,0.5)", highlightColor+",0)"],
         center: {x: relX(0.5), y: relY(0.6)},
         r: Math.min(relX(0.3), relY(0.3))
     }),
